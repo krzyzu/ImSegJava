@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dcm4che">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Studia/Sem6/OSM/projekt2/dcm4che" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../Studia/Sem6/OSM/projekt2/dcm4che" recursive="false" />
+  </library>
+</component>
