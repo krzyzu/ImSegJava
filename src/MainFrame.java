@@ -7,15 +7,21 @@ public class MainFrame extends JFrame {
 // 60:00
     private Toolbar toolbar;
     private UserPanel userPanel;
-    private ShowImagePanel originImagePanel;
-    private ShowImagePanel segmentedImagePanel;
+    private OriginImagePanel originImagePanel;
+    private SegmentedImagePanel segmentedImagePanel;
+
 
     public MainFrame() {
         super("Image segmentation");
+        int panelWidth= 1000;
+        int panelHeight = 700;
         toolbar = new Toolbar();
         userPanel = new UserPanel();
-        originImagePanel = new ShowImagePanel();
-        segmentedImagePanel = new ShowImagePanel();
+        userPanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
+        originImagePanel = new OriginImagePanel();
+        originImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
+        segmentedImagePanel = new SegmentedImagePanel();
+        segmentedImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
 
         setLayout(new BorderLayout());
         add(toolbar,BorderLayout.NORTH);
@@ -25,7 +31,8 @@ public class MainFrame extends JFrame {
 
 
 
-        setSize(500,500);
+        setLocation(500,100);
+        setSize(panelWidth,panelHeight);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
