@@ -45,4 +45,5 @@ public class UserPanel extends JPanel {
             String dicomPath = fileChooser.getSelectedFile().getPath();
         }
     }
+
 }
