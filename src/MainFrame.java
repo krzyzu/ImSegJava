@@ -1,7 +1,11 @@
 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class MainFrame extends JFrame {
 // 60:00
@@ -9,12 +13,11 @@ public class MainFrame extends JFrame {
     private UserPanel userPanel;
     private OriginImagePanel originImagePanel;
     private SegmentedImagePanel segmentedImagePanel;
-
+    private int panelWidth= 1000;
+    private int panelHeight = 700;
 
     public MainFrame() {
         super("Image segmentation");
-        int panelWidth= 1000;
-        int panelHeight = 700;
         toolbar = new Toolbar();
         userPanel = new UserPanel();
         userPanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
@@ -22,6 +25,24 @@ public class MainFrame extends JFrame {
         originImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
         segmentedImagePanel = new SegmentedImagePanel();
         segmentedImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
+        userPanel.setUserListener(new FormListener() {
+            @Override
+            public void formEventOccured(FormEvent e) {
+                String imagePath = e.getPath();
+                try {
+                    BufferedImage originImage = null;
+                    originImage = ImageIO.read(new File(imagePath));
+                    originImagePanel.setImage(originImage);
+                }
+                catch (IOException ioe) {
+                    System.out.println("Error while reading image");
+                    System.exit(-1);
+                }
+            }
+        });
+        layoutComponents();
+    }
+    private void layoutComponents() {
 
         setLayout(new BorderLayout());
         add(toolbar,BorderLayout.NORTH);
