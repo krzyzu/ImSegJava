@@ -3,9 +3,11 @@ import com.sun.xml.internal.bind.v2.TODO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class OriginImagePanel extends JPanel{
     private ImagePanel imagePanel;
+
     public OriginImagePanel() {
         Border innerBorder = BorderFactory.createTitledBorder("Obraz Poczatkowy");
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
@@ -29,6 +31,10 @@ public class OriginImagePanel extends JPanel{
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
         add(imagePanel, gbc);
+    }
+
+    public void setImage(BufferedImage image) {
+        imagePanel.setImage(image);
     }
 
 }

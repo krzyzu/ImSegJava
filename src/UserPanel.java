@@ -7,10 +7,12 @@ import java.awt.*;
 public class UserPanel extends JPanel {
     private JFileChooser fileChooser;
     private JButton chooseFileButton;
+    private FormListener formListener;
+    private FormEvent formEvent;
 
     public UserPanel() {
         fileChooser = new JFileChooser();
-        FileNameExtensionFilter fileChooserFilter = new FileNameExtensionFilter("DICOM", "dcr", "RA64","DCM","DCM30");
+        FileNameExtensionFilter fileChooserFilter = new FileNameExtensionFilter("DICOM", "dcr", "RA64","DCM","DCM30", "JPG", "JPEG");
         fileChooser.setFileFilter(fileChooserFilter);
         chooseFileButton = new JButton("Wybierz plik");
         chooseFileButton.addActionListener(v -> chooseFileButtonAction());
@@ -40,10 +42,15 @@ public class UserPanel extends JPanel {
     }
     private void chooseFileButtonAction() {
         int result = fileChooser.showOpenDialog(null);
-
         if (result == JFileChooser.APPROVE_OPTION) {
             String dicomPath = fileChooser.getSelectedFile().getPath();
+            FormEvent formEvent = new FormEvent(this, dicomPath);
+            if (formListener != null) {
+                formListener.formEventOccured(formEvent);
+            }
         }
     }
-
+    public void setUserListener(FormListener fl) {
+        this.formListener = fl;
+    }
 }
