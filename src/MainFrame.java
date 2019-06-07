@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class MainFrame extends JFrame {
-// 60:00
+
     private Toolbar toolbar;
     private UserPanel userPanel;
     private OriginImagePanel originImagePanel;
@@ -25,6 +25,7 @@ public class MainFrame extends JFrame {
         originImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
         segmentedImagePanel = new SegmentedImagePanel();
         segmentedImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
+
         userPanel.setUserListener(new FormListener() {
             @Override
             public void formEventOccured(FormEvent e) {
@@ -39,7 +40,13 @@ public class MainFrame extends JFrame {
                     System.exit(-1);
                 }
             }
+
+            @Override
+            public void segmentEventOccured(SegmentEvent e) {
+                // TODO receive segmented image and show it in SegmentedImagePanel
+            }
         });
+
         layoutComponents();
     }
     private void layoutComponents() {
