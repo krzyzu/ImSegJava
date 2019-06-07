@@ -40,7 +40,6 @@ public class MainFrame extends JFrame {
                     System.exit(-1);
                 }
             }
-
             @Override
             public void segmentEventOccured(SegmentEvent e) {
                 // TODO receive segmented image and show it in SegmentedImagePanel
