@@ -1,7 +1,7 @@
-
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,6 +15,11 @@ public class MainFrame extends JFrame {
     private SegmentedImagePanel segmentedImagePanel;
     private int panelWidth= 1000;
     private int panelHeight = 700;
+    // tu nowe wariaty
+    
+    public static final int MODE_CONTINUOUS = 1; 
+    public static final int MODE_ITERATIVE = 2; 
+    
 
     public MainFrame() {
         super("Image segmentation");
@@ -25,7 +30,7 @@ public class MainFrame extends JFrame {
         originImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
         segmentedImagePanel = new SegmentedImagePanel();
         segmentedImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
-
+        
         userPanel.setUserListener(new FormListener() {
             @Override
             public void formEventOccured(FormEvent e) {
@@ -34,6 +39,21 @@ public class MainFrame extends JFrame {
                     BufferedImage originImage = null;
                     originImage = ImageIO.read(new File(imagePath));
                     originImagePanel.setImage(originImage);
+                    
+        	        int k = 4; 
+        	        String m = "-2"; 
+        	        int mode = 1; 
+        	        if (m.equals("-c")) { 
+        	            mode = MODE_ITERATIVE; 
+        	        } else if (m.equals("-c")) { 
+        	            mode = MODE_CONTINUOUS; 
+        	        }
+        	        // create new KMeans object 
+        	        Means kmeans = new Means(); 
+        	        // call the function to actually start the clustering 
+        	        BufferedImage dstImage = kmeans.calculate(originImage,k,mode);
+        	        segmentedImagePanel.setImage(dstImage);
+        	        
                 }
                 catch (IOException ioe) {
                     System.out.println("Error while reading image");
@@ -43,6 +63,8 @@ public class MainFrame extends JFrame {
 
             @Override
             public void segmentEventOccured(SegmentEvent e) {
+            	
+            	
                 // TODO receive segmented image and show it in SegmentedImagePanel
             }
         });
@@ -56,8 +78,6 @@ public class MainFrame extends JFrame {
         add(userPanel,BorderLayout.WEST);
         add(originImagePanel,BorderLayout.CENTER);
         add(segmentedImagePanel,BorderLayout.EAST);
-
-
 
         setLocation(500,100);
         setSize(panelWidth,panelHeight);

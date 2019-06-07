@@ -21,4 +21,5 @@ public class SegmentEvent extends EventObject {
     public void setBufferedImage(BufferedImage bufferedImage) {
         this.bufferedImage = bufferedImage;
     }
+  
 }
