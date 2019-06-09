@@ -86,7 +86,7 @@ public class UserPanel extends JPanel {
 
     private void segmentImageButtonAction() {
         SegmentationType segmentationType = (SegmentationType) segTypeComboBox.getSelectedItem();
-        segmentEvent = new SegmentEvent(this, segmentationType.getType().toString());
+        segmentEvent = new SegmentEvent(this, segmentationType.getType().toString(), segmentationType.getId());
         if (formListener != null) {
             formListener.segmentEventOccured(segmentEvent);
         }

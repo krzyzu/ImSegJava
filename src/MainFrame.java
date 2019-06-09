@@ -42,19 +42,7 @@ public class MainFrame extends JFrame {
                     originImage = ImageIO.read(new File(imagePath));
                     originImagePanel.setImage(originImage);
 
-        	        int k = 4;
-        	        String m = "-2";
-        	        int mode = 1;
-        	        if (m.equals("-c")) {
-        	            mode = MODE_ITERATIVE;
-        	        } else if (m.equals("-c")) {
-        	            mode = MODE_CONTINUOUS;
-        	        }
-        	        // create new KMeans object
-        	        Means kmeans = new Means();
-        	        // call the function to actually start the clustering
-        	        BufferedImage dstImage = kmeans.calculate(originImage,k,mode);
-        	        segmentedImagePanel.setImage(dstImage);
+
 
                 }
                 catch (IOException ioe) {
@@ -66,6 +54,22 @@ public class MainFrame extends JFrame {
             @Override
             public void segmentEventOccured(SegmentEvent e) {
                 segmentableImage = originImagePanel.getImage();
+                int id = e.getSegmentationID();
+                if (id == 1) {
+                    int k = 4;
+                    String m = "-2";
+                    int mode = 1;
+                    if (m.equals("-c")) {
+                        mode = MODE_ITERATIVE;
+                    } else if (m.equals("-c")) {
+                        mode = MODE_CONTINUOUS;
+                    }
+                    // create new KMeans object
+                    Means kmeans = new Means();
+                    // call the function to actually start the clustering
+                    BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
+                    segmentedImagePanel.setImage(dstImage);
+                }
             }
         });
 
