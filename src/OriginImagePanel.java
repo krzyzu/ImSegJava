@@ -5,8 +5,11 @@ import java.awt.image.BufferedImage;
 
 public class OriginImagePanel extends JPanel{
     private ImagePanel imagePanel;
+    private BufferedImage image;
 
     public OriginImagePanel() {
+        imagePanel = null;
+        image = null;
         Border innerBorder = BorderFactory.createTitledBorder("Obraz Poczatkowy");
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder,innerBorder));
@@ -31,7 +34,12 @@ public class OriginImagePanel extends JPanel{
     }
 
     public void setImage(BufferedImage image) {
+        this.image = image;
         imagePanel.setImage(image);
+    }
+
+    public BufferedImage getImage() {
+        return image;
     }
 
 }

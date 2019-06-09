@@ -1,8 +1,10 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class UserPanel extends JPanel {
     private JFileChooser fileChooser;
@@ -11,6 +13,8 @@ public class UserPanel extends JPanel {
     private FormListener formListener;
     private FormEvent formEvent;
     private SegmentEvent segmentEvent;
+    private JComboBox segTypeComboBox;
+    private SegmentableImage segmentableImage;
 
     public UserPanel() {
         fileChooser = new JFileChooser();
@@ -20,10 +24,17 @@ public class UserPanel extends JPanel {
         chooseFileButton.addActionListener(v -> chooseFileButtonAction());
         segmentImageButton = new JButton("Dokonaj segmentacji");
         segmentImageButton.addActionListener(v -> segmentImageButtonAction());
+        segTypeComboBox = new JComboBox();
+        segmentableImage = null;
         Dimension dim = getPreferredSize();
         dim.width = 150;
         setPreferredSize(dim);
 
+        DefaultComboBoxModel segTypeComboModel = new DefaultComboBoxModel();
+        segTypeComboModel.addElement("Rozrost regionow");
+        segTypeComboModel.addElement("k-means");
+        segTypeComboModel.addElement("Wododzialowy");
+        segTypeComboBox.setModel(segTypeComboModel);
         Border innerBorder = BorderFactory.createTitledBorder("Panel Uzytkownika");
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder,innerBorder));
@@ -47,7 +58,16 @@ public class UserPanel extends JPanel {
         gbc.weightx = 1;
         gbc.weighty = 0.1;
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy ++;
+        gbc.insets = new Insets(0,0,0,10);
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        add(segTypeComboBox, gbc);
+
+        gbc.weightx = 1;
+        gbc.weighty = 0.1;
+        gbc.gridx = 0;
+        gbc.gridy ++;
         gbc.insets = new Insets(0,0,0,10);
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
@@ -65,7 +85,8 @@ public class UserPanel extends JPanel {
     }
 
     private void segmentImageButtonAction() {
-        segmentEvent = new SegmentEvent(this);
+        SegmentationType segmentationType = (SegmentationType) segTypeComboBox.getSelectedItem();
+        segmentEvent = new SegmentEvent(this, segmentationType.getType().toString());
         if (formListener != null) {
             formListener.segmentEventOccured(segmentEvent);
         }
@@ -73,4 +94,16 @@ public class UserPanel extends JPanel {
     public void setUserListener(FormListener fl) {
         this.formListener = fl;
     }
+}
+
+class SegmentationType {
+    private int id;
+    private String type;
+    public SegmentationType(int id, String type) {
+        this.id = id;
+        this.type = type;
+    }
+    public String toString() { return type; }
+    public String getType() { return type;}
+    public int getId() { return id; }
 }

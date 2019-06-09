@@ -13,6 +13,7 @@ public class MainFrame extends JFrame {
     private UserPanel userPanel;
     private OriginImagePanel originImagePanel;
     private SegmentedImagePanel segmentedImagePanel;
+    private BufferedImage segmentableImage;
     private int panelWidth= 1000;
     private int panelHeight = 700;
 
@@ -25,6 +26,7 @@ public class MainFrame extends JFrame {
         originImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
         segmentedImagePanel = new SegmentedImagePanel();
         segmentedImagePanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
+        segmentableImage = null;
 
         userPanel.setUserListener(new FormListener() {
             @Override
@@ -42,7 +44,7 @@ public class MainFrame extends JFrame {
             }
             @Override
             public void segmentEventOccured(SegmentEvent e) {
-                // TODO receive segmented image and show it in SegmentedImagePanel
+                segmentableImage = originImagePanel.getImage();
             }
         });
 
