@@ -21,4 +21,5 @@ public class SegmentEvent extends EventObject {
     public void setSegmentationType(String segmentationType) {
         this.segmentationType = segmentationType;
     }
+  
 }
