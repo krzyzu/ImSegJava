@@ -85,8 +85,8 @@ public class UserPanel extends JPanel {
     }
 
     private void segmentImageButtonAction() {
-        SegmentationType segmentationType = (SegmentationType) segTypeComboBox.getSelectedItem();
-        segmentEvent = new SegmentEvent(this, segmentationType.getType().toString(), segmentationType.getId());
+        int id = segTypeComboBox.getSelectedIndex();
+        segmentEvent = new SegmentEvent(this, id);
         if (formListener != null) {
             formListener.segmentEventOccured(segmentEvent);
         }
@@ -94,16 +94,4 @@ public class UserPanel extends JPanel {
     public void setUserListener(FormListener fl) {
         this.formListener = fl;
     }
-}
-
-class SegmentationType {
-    private int id;
-    private String type;
-    public SegmentationType(int id, String type) {
-        this.id = id;
-        this.type = type;
-    }
-    public String toString() { return type; }
-    public String getType() { return type;}
-    public int getId() { return id; }
 }
