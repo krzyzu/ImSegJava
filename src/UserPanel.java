@@ -34,6 +34,7 @@ public class UserPanel extends JPanel {
         segTypeComboModel.addElement("Rozrost regionow");
         segTypeComboModel.addElement("k-means");
         segTypeComboModel.addElement("Wododzialowy");
+        segTypeComboModel.addElement("Segmentacja na kolor");
         segTypeComboBox.setModel(segTypeComboModel);
         Border innerBorder = BorderFactory.createTitledBorder("Panel Uzytkownika");
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);

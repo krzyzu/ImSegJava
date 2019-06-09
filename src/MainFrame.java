@@ -1,4 +1,10 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
 
+import javax.imageio.ImageIO;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -16,7 +22,7 @@ public class MainFrame extends JFrame {
     private BufferedImage segmentableImage;
     private int panelWidth= 1000;
     private int panelHeight = 700;
-    // tu nowe wariaty
+    // tu nowe 
 
     public static final int MODE_CONTINUOUS = 1;
     public static final int MODE_ITERATIVE = 2;
@@ -41,8 +47,6 @@ public class MainFrame extends JFrame {
                     BufferedImage originImage = null;
                     originImage = ImageIO.read(new File(imagePath));
                     originImagePanel.setImage(originImage);
-
-
 
                 }
                 catch (IOException ioe) {
@@ -69,6 +73,19 @@ public class MainFrame extends JFrame {
                     // call the function to actually start the clustering
                     BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
                     segmentedImagePanel.setImage(dstImage);
+                }
+                if (id == 2) {
+                	
+                	
+                }
+                
+                
+                if (id == 3) {
+                   
+                	ColorSegmentation color = new ColorSegmentation(segmentableImage);
+                	BufferedImage resultcolor = color.segmentize(100);
+                	segmentedImagePanel.setImage(resultcolor);
+                
                 }
             }
         });
