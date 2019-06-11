@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28cd7cfd-b5da-4c44-89a3-e5ad46bc04bf" name="Default Changelist" comment="" />
+    <list default="true" id="28cd7cfd-b5da-4c44-89a3-e5ad46bc04bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Cluster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/Cluster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/ColorSegmentation$SPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/ColorSegmentation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/FormEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/FormEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/FormListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/FormListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Histogram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/Histogram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/ImagePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/ImagePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Means$Cluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Means.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/Means.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/OriginImagePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/OtsuThresholdValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/RGB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/RGB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/SegmentationImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/SegmentedImagePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/SegmentedImagePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/StringListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/StringListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/TextPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Threshold.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/Threshold.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Toolbar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/UserPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/UserPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +54,7 @@
         <counts>
           <entry key="classpath" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="55" />
+          <entry key="java" value="56" />
           <entry key="project" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -37,19 +63,19 @@
         <counts>
           <entry key="Eclipse" value="2" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="55" />
+          <entry key="JAVA" value="56" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="42" />
-          <entry key="java" value="5984" />
+          <entry key="java" value="6004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5984" />
+          <entry key="JAVA" value="6004" />
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
       </usages-collector>
@@ -57,11 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="236">
+              <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,15 +110,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+            <state relative-caret-position="192">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6185#6186#0" expanded="true" />
                 <element signature="e#6223#6224#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Toolbar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/TextPanel.java" />
         <option value="$PROJECT_DIR$/src/StringListener.java" />
         <option value="$PROJECT_DIR$/src/FormPanel.java" />
-        <option value="$PROJECT_DIR$/src/Toolbar.java" />
         <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/ShowImagePanel.java" />
         <option value="$PROJECT_DIR$/src/ChooseFileFrame.java" />
@@ -136,8 +174,9 @@
         <option value="$PROJECT_DIR$/src/SegmentableImage.java" />
         <option value="$PROJECT_DIR$/src/OriginImagePanel.java" />
         <option value="$PROJECT_DIR$/src/SegmentEvent.java" />
-        <option value="$PROJECT_DIR$/src/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/UserPanel.java" />
+        <option value="$PROJECT_DIR$/src/Toolbar.java" />
+        <option value="$PROJECT_DIR$/src/MainFrame.java" />
       </list>
     </option>
   </component>
@@ -182,12 +221,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560258274963" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560263399651" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/FirstSwingProject" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,6 +286,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13959731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -257,7 +297,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.19263457" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.19263457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -265,7 +305,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -344,13 +384,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ChooseFileFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/Toolbar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StringListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -428,16 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SegmentEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -465,14 +488,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Toolbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+        <state relative-caret-position="192">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6185#6186#0" expanded="true" />
             <element signature="e#6223#6224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

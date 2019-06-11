@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements MenuListener, ActionListener {
 
     private Toolbar toolbar;
     private UserPanel userPanel;
