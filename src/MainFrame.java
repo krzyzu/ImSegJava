@@ -21,11 +21,6 @@ public class MainFrame extends JFrame {
     private BufferedImage segmentableImage;
     private int panelWidth= 1000;
     private int panelHeight = 700;
-    // tu nowe wariaty
-
-    public static final int MODE_CONTINUOUS = 1;
-    public static final int MODE_ITERATIVE = 2;
-
 
     public MainFrame() {
         super("Image segmentation");
@@ -47,8 +42,6 @@ public class MainFrame extends JFrame {
                     originImage = ImageIO.read(new File(imagePath));
                     originImagePanel.setImage(originImage);
 
-
-
                 }
                 catch (IOException ioe) {
                     System.out.println("Error while reading image");
@@ -62,16 +55,8 @@ public class MainFrame extends JFrame {
                 int id = e.getSegmentationID();
                 if (id == 1) {
                     int k = Integer.parseInt(e.getSegParam());
-                    String m = "-2";
-                    int mode = 1;
-                    if (m.equals("-c")) {
-                        mode = MODE_ITERATIVE;
-                    } else if (m.equals("-c")) {
-                        mode = MODE_CONTINUOUS;
-                    }
-                    // create new KMeans object
+                    int mode = 1;                
                     Means kmeans = new Means();
-                    // call the function to actually start the clustering
                     BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
                     segmentedImagePanel.setImage(dstImage);
                 }
@@ -100,9 +85,6 @@ public class MainFrame extends JFrame {
         add(userPanel,BorderLayout.WEST);
         add(originImagePanel,BorderLayout.CENTER);
         add(segmentedImagePanel,BorderLayout.EAST);
-
-
-
         setLocation(500,100);
         setSize(panelWidth,panelHeight);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
