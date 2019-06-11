@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28cd7cfd-b5da-4c44-89a3-e5ad46bc04bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -200,7 +197,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560264599461" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560265455471" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/FirstSwingProject" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
