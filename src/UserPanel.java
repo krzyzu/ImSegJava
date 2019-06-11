@@ -14,7 +14,6 @@ public class UserPanel extends JPanel {
     private FormEvent formEvent;
     private SegmentEvent segmentEvent;
     private JComboBox segTypeComboBox;
-    private SegmentableImage segmentableImage;
     private int comboID;
     private JTextField kNeighTxtField;
     private JTextField thresholdTxtField;
@@ -30,7 +29,6 @@ public class UserPanel extends JPanel {
         segmentImageButton.addActionListener(v -> segmentImageButtonAction());
         segTypeComboBox = new JComboBox();
 //        segTypeComboBox.addActionListener(v -> segTypeComboAction());
-        segmentableImage = null;
         comboID = 0;
         kNeighTxtField = new JTextField(8);
         kNeighTxtField.setText("3");
@@ -90,7 +88,7 @@ public class UserPanel extends JPanel {
         gbc.insets = new Insets(0, 0, 0, 10);
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
-        add(new JLabel("Ilosc k-sasiadow"), gbc);
+        add(new JLabel("Ilosc clusterow"), gbc);
 
         gbc.weightx = 0.5;
         gbc.weighty = 0.1;
