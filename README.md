@@ -12,8 +12,10 @@ algorytmem, np. rozrostu regionów (region-growing), k-średnich (k-means) lub w
 widoczne były obraz oryginalny i obraz z nałożonymi wynikami segmentacji. Parametry
 przetwarzania wprowadzane są przez użytkownika za pomocą odpowiednich okien dialogowych.
 
+Zaimplementowaliśmy segmentacje typu: k-means, thresholding i color segmenatation.
+
 **Zespol:** Jan Masny, Michał Krzyżanek
 
-**Biblioteki:** dcm4che
+**Biblioteki:** dcm4che,jai-imageio
 
 **Uwagi dodatkowe:** Xxxx
