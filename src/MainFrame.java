@@ -2,7 +2,12 @@
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -70,6 +75,19 @@ public class MainFrame extends JFrame {
                     BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
                     segmentedImagePanel.setImage(dstImage);
                 }
+
+                if (id == 1) {
+                	ColorSegmentation color = new ColorSegmentation(segmentableImage);
+                	BufferedImage resultcolor = color.segmentize(100);
+                	segmentedImagePanel.setImage(resultcolor);
+                }
+
+                if (id == 2) {
+
+                	Threshold thresh = new Threshold();
+                	BufferedImage resulttresh = thresh.apply(segmentableImage);
+                	segmentedImagePanel.setImage(resulttresh);
+                }
             }
         });
 
@@ -91,4 +109,29 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
+    @Override
+	public void menuSelected(MenuEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void menuDeselected(MenuEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void menuCanceled(MenuEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getSource().equals(exit)) {
+			System.exit(0);
+		}
+	}
 }
