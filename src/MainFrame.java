@@ -29,10 +29,6 @@ public class MainFrame extends JFrame implements MenuListener,ActionListener {
     private BufferedImage segmentableImage;
     private int panelWidth= 1000;
     private int panelHeight = 700;
- 
-    public static final int MODE_CONTINUOUS = 1;
-    public static final int MODE_ITERATIVE = 2;
-
 
     public MainFrame() {
         super("Image segmentation");
@@ -74,13 +70,7 @@ public class MainFrame extends JFrame implements MenuListener,ActionListener {
                 
                 if (id == 0) {
                     int k = 4;
-                    String m = "-1";
-                    int mode = 1;
-                    if (m.equals("-c")) {
-                        mode = MODE_ITERATIVE;
-                    } else if (m.equals("-c")) {
-                        mode = MODE_CONTINUOUS;
-                    }
+                    int mode = 1; // MODE_CONTINUOUS
                     Means kmeans = new Means();
                     BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
                     segmentedImagePanel.setImage(dstImage);
