@@ -8,29 +8,41 @@ import javax.imageio.ImageIO;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements MenuListener,ActionListener {
 
-    private Toolbar toolbar;
+	private JMenuBar bar;
+	private JMenu application;
+	private JMenuItem exit;
     private UserPanel userPanel;
     private OriginImagePanel originImagePanel;
     private SegmentedImagePanel segmentedImagePanel;
     private BufferedImage segmentableImage;
     private int panelWidth= 1000;
     private int panelHeight = 700;
-    // tu nowe 
-
+ 
     public static final int MODE_CONTINUOUS = 1;
     public static final int MODE_ITERATIVE = 2;
 
 
     public MainFrame() {
         super("Image segmentation");
-        toolbar = new Toolbar();
+        bar = new JMenuBar();
+		application = new JMenu("Menu");
+		exit = new JMenuItem("Zamknij");
+		exit.addActionListener(this);;
+		application.add(exit);
+		bar.add(application);
+		this.setJMenuBar(bar);
         userPanel = new UserPanel();
         userPanel.setPreferredSize(new Dimension(panelWidth/3,panelHeight/3));
         originImagePanel = new OriginImagePanel();
@@ -77,6 +89,7 @@ public class MainFrame extends JFrame {
                 if (id == 2) {
                 	
                 	
+                	
                 }
                 
                 
@@ -95,12 +108,9 @@ public class MainFrame extends JFrame {
     private void layoutComponents() {
 
         setLayout(new BorderLayout());
-        add(toolbar,BorderLayout.NORTH);
         add(userPanel,BorderLayout.WEST);
         add(originImagePanel,BorderLayout.CENTER);
         add(segmentedImagePanel,BorderLayout.EAST);
-
-
 
         setLocation(500,100);
         setSize(panelWidth,panelHeight);
@@ -108,4 +118,29 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
+    @Override
+	public void menuSelected(MenuEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void menuDeselected(MenuEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void menuCanceled(MenuEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getSource().equals(exit)) {
+			System.exit(0);
+		}
+	}
 }
