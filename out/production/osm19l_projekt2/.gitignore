@@ -14,3 +14,9 @@
 /images/
 /MainFrame$1.class
 /Toolbar.class
+/Thresholder.class
+/Thresholder$1.class
+/Threshold.class
+/RGB.class
+/OtsuThresholdValue.class
+/Histogram.class

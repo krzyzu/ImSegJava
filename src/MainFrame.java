@@ -85,15 +85,18 @@ public class MainFrame extends JFrame implements MenuListener,ActionListener {
                     BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
                     segmentedImagePanel.setImage(dstImage);
                 }
+                
                 if (id == 1) {
                 	ColorSegmentation color = new ColorSegmentation(segmentableImage);
                 	BufferedImage resultcolor = color.segmentize(100);
                 	segmentedImagePanel.setImage(resultcolor);	
                 }
                 
-                
                 if (id == 2) {
-
+                	
+                	Threshold thresh = new Threshold();
+                	BufferedImage resulttresh = thresh.apply(segmentableImage);
+                	segmentedImagePanel.setImage(resulttresh);
                 }
             }
         });
