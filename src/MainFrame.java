@@ -59,18 +59,20 @@ public class MainFrame extends JFrame implements MenuListener, ActionListener {
             public void segmentEventOccured(SegmentEvent e) {
                 segmentableImage = originImagePanel.getImage();
                 int id = e.getSegmentationID();
-                if (id == 1) {
+
+                if (id == 0) {
                     int k = Integer.parseInt(e.getSegParam());
-                    int mode = 1;                
-                    Means kmeans = new Means();
-                    BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
-                    segmentedImagePanel.setImage(dstImage);
+                    ColorSegmentation color = new ColorSegmentation(segmentableImage);
+                    BufferedImage resultcolor = color.segmentize(k);
+                    segmentedImagePanel.setImage(resultcolor);
                 }
 
                 if (id == 1) {
-                	ColorSegmentation color = new ColorSegmentation(segmentableImage);
-                	BufferedImage resultcolor = color.segmentize(100);
-                	segmentedImagePanel.setImage(resultcolor);
+                    int k = Integer.parseInt(e.getSegParam());
+                    int mode = 1;
+                    Means kmeans = new Means();
+                    BufferedImage dstImage = kmeans.calculate(segmentableImage, k, mode);
+                    segmentedImagePanel.setImage(dstImage);
                 }
 
                 if (id == 2) {
