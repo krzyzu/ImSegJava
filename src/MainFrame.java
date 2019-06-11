@@ -56,7 +56,7 @@ public class MainFrame extends JFrame {
                 segmentableImage = originImagePanel.getImage();
                 int id = e.getSegmentationID();
                 if (id == 1) {
-                    int k = 4;
+                    int k = Integer.parseInt(e.getSegParam());
                     String m = "-2";
                     int mode = 1;
                     if (m.equals("-c")) {
