@@ -2,11 +2,18 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.BorderLayout;
+import java.io.File; 
+import java.util.Arrays; 
+import javax.imageio.ImageIO;
 
 public class OriginImagePanel extends JPanel{
     private ImagePanel imagePanel;
+    private BufferedImage image;
 
     public OriginImagePanel() {
+        imagePanel = null;
+        image = null;
         Border innerBorder = BorderFactory.createTitledBorder("Obraz Poczatkowy");
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder,innerBorder));
@@ -19,19 +26,16 @@ public class OriginImagePanel extends JPanel{
     }
     private void layoutComponents() {
         setLayout(new BorderLayout());
-       // GridBagConstraints gbc = new GridBagConstraints();
-       // gbc.weightx = 1;
-       // gbc.weighty = 0.1;
-       // gbc.gridx = 0;
-       // gbc.gridy = 0;
-       // gbc.insets = new Insets(0,0,0,5);
-       // gbc.fill = GridBagConstraints.NONE;
-       // gbc.anchor = GridBagConstraints.LINE_END;
         add(imagePanel, BorderLayout.CENTER);
     }
 
     public void setImage(BufferedImage image) {
+        this.image = image;
         imagePanel.setImage(image);
+    }
+
+    public BufferedImage getImage() {
+        return image;
     }
 
 }
