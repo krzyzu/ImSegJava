@@ -22,16 +22,20 @@ public class UserPanel extends JPanel {
         fileChooser = new JFileChooser();
         FileNameExtensionFilter fileChooserFilter = new FileNameExtensionFilter("DICOM", "dcr", "RA64","DCM","DCM30", "JPG", "JPEG");
         fileChooser.setFileFilter(fileChooserFilter);
-        chooseFileButton = new JButton("Wybierz plik");
+        chooseFileButton = new JButton("Wybierz obraz");
         chooseFileButton.addActionListener(v -> chooseFileButtonAction());
         segmentImageButton = new JButton("Dokonaj segmentacji");
         segmentImageButton.addActionListener(v -> segmentImageButtonAction());
         segTypeComboBox = new JComboBox();
 //        segTypeComboBox.addActionListener(v -> segTypeComboAction());
         comboID = 0;
-        kNeighTxtField = new JTextField(20);
+        kNeighTxtField = new JTextField(5);
+        kNeighTxtField.setMinimumSize(new Dimension(5,10));
+        kNeighTxtField.setMaximumSize(new Dimension(5,10));
         kNeighTxtField.setText("3");
-        thresholdTxtField = new JTextField(20);
+        thresholdTxtField = new JTextField(5);
+        thresholdTxtField.setMinimumSize(new Dimension(5,10));
+        thresholdTxtField.setMaximumSize(new Dimension(5,10));
         thresholdTxtField.setText("100");
         Dimension dim = getPreferredSize();
         dim.width = 150;
@@ -52,76 +56,85 @@ public class UserPanel extends JPanel {
     private void layoutComponents() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-
         //gbc.weightx = 1;
         //gbc.weighty = 0.2;
         gbc.gridx = 0;
         gbc.gridy = 0;
+        gbc.gridwidth = 2;
         //gbc.insets = new Insets(0,0,0,20);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(chooseFileButton, gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
+        gbc.insets = new Insets(20,0,20,0);
         gbc.gridx = 0;
         gbc.gridy ++;
         //gbc.insets = new Insets(0,0,0,10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(new JLabel("Rodzaj segmentacji"), gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
+        gbc.insets = new Insets(5,0,20,0);
         gbc.gridx = 0;
         gbc.gridy ++;
         //gbc.insets = new Insets(0,0,0,10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(segTypeComboBox, gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
+
+        gbc.insets = new Insets(10,0,5,0);
         gbc.gridx = 0;
         gbc.gridy ++;
+        gbc.gridwidth = 1;
         //gbc.insets = new Insets(0, 0, 0, 10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
-        add(new JLabel("Ilosc klas"), gbc);
+        gbc.anchor = GridBagConstraints.CENTER;
+        add(new JLabel("Ilosc klas(k-means)"), gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
         gbc.gridx = 1;
-        //gbc.insets = new Insets(0, 0, 0, 10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
-        add(new JLabel("Threshold"), gbc);
+        gbc.gridwidth = 1;
+        gbc.insets = new Insets(5, 10, 0, 0);
+        gbc.anchor = GridBagConstraints.CENTER;
+        add(new JLabel("Prog(kolor)"), gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
+
+        gbc.insets = new Insets(5,0,5,0);
         gbc.gridx = 0;
         gbc.gridy++;
+        gbc.gridwidth = 1;
         //gbc.insets = new Insets(0, 0, 0, 10);
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.VERTICAL;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(kNeighTxtField, gbc);
 
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
         gbc.gridx = 1;
+        gbc.gridwidth = 1;
         //gbc.insets = new Insets(0, 0, 0, 10);
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.VERTICAL;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(thresholdTxtField, gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
+
+        gbc.insets = new Insets(20,0,20,0);
         gbc.gridx = 0;
         gbc.gridy ++;
+        gbc.gridwidth = 2;
         //gbc.insets = new Insets(0,0,0,10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(segmentImageButton, gbc);
     }
     private void chooseFileButtonAction() {
