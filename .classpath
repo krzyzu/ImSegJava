@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-audit-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-base64-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-core-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-filecache-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-hp-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-image-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-imageio-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-imageio-rle-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-iod-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-net-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/dcm4che-soundex-2.0.29.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/jai_imageio.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/log4j-1.2.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/slf4j-api-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Jasiek/jarfiles/OSM_Java_05_kody/OSM_Java_05_kody/W5_DICOM/libs/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="output" path="out/production/osm19l_projekt2"/>
 </classpath>
