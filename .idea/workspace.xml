@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28cd7cfd-b5da-4c44-89a3-e5ad46bc04bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/dcm4che.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osm19l_projekt2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/osm19l_projekt2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Cluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/ColorSegmentation$SPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/ColorSegmentation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/FormEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/FormListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Histogram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/ImagePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/MainFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Means.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/OriginImagePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/OtsuThresholdValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/RGB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/SegmentEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/SegmentedImagePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/StringListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/TextPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Threshold.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/Toolbar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/osm19l_projekt2/UserPanel.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,32 +39,35 @@
     <session id="-2016093194">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="3" />
+          <entry key="project.open.time.15" value="4" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="classpath" value="1" />
+          <entry key="classpath" value="2" />
+          <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
           <entry key="java" value="57" />
-          <entry key="project" value="1" />
+          <entry key="project" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Eclipse" value="2" />
+          <entry key="Eclipse" value="4" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="57" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -73,16 +99,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="100" column="33" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.classpath">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.project">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -144,8 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,26 +195,23 @@
             </path>
             <path>
               <item name="osm19l_projekt2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="osm19l_projekt2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="osm19l_projekt2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560258274963" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Studia/Sem6/OSM/projekt2/dcm4che" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -234,9 +271,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14161074" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14563759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -245,7 +281,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.19263457" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.19263457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -346,16 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -434,13 +460,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="100" column="33" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -506,7 +542,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>dcm4che</last-edited>
+          <last-edited>libs</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
