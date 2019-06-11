@@ -17,7 +17,6 @@ public class UserPanel extends JPanel {
     private int comboID;
     private JTextField kNeighTxtField;
     private JTextField thresholdTxtField;
-    private JTextField colorTxtField;
 
     public UserPanel() {
         fileChooser = new JFileChooser();
@@ -30,17 +29,17 @@ public class UserPanel extends JPanel {
         segTypeComboBox = new JComboBox();
 //        segTypeComboBox.addActionListener(v -> segTypeComboAction());
         comboID = 0;
-        kNeighTxtField = new JTextField(8);
+        kNeighTxtField = new JTextField(20);
         kNeighTxtField.setText("3");
-        thresholdTxtField = new JTextField(8);
-        colorTxtField = new JTextField(8);
+        thresholdTxtField = new JTextField(20);
+        thresholdTxtField.setText("100");
         Dimension dim = getPreferredSize();
         dim.width = 150;
         setPreferredSize(dim);
 
         DefaultComboBoxModel segTypeComboModel = new DefaultComboBoxModel();
-        segTypeComboModel.addElement("Segmentacja k-means");
         segTypeComboModel.addElement("Segmentacja na kolor");
+        segTypeComboModel.addElement("Segmentacja k-means");
         segTypeComboModel.addElement("Progowanie met. Otsu");
         segTypeComboBox.setModel(segTypeComboModel);
         Border innerBorder = BorderFactory.createTitledBorder("Panel Uzytkownika");
@@ -54,107 +53,73 @@ public class UserPanel extends JPanel {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
 
-        gbc.weightx = 1;
-        gbc.weighty = 0.1;
+        //gbc.weightx = 1;
+        //gbc.weighty = 0.2;
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.insets = new Insets(0,0,0,5);
+        //gbc.insets = new Insets(0,0,0,20);
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
         add(chooseFileButton, gbc);
 
-        gbc.weightx = 1;
-        gbc.weighty = 0.1;
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
         gbc.gridx = 0;
         gbc.gridy ++;
-        gbc.insets = new Insets(0,0,0,10);
+        //gbc.insets = new Insets(0,0,0,10);
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
         add(new JLabel("Rodzaj segmentacji"), gbc);
 
-        gbc.weightx = 1;
-        gbc.weighty = 0.1;
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
         gbc.gridx = 0;
         gbc.gridy ++;
-        gbc.insets = new Insets(0,0,0,10);
+        //gbc.insets = new Insets(0,0,0,10);
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
         add(segTypeComboBox, gbc);
 
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.1;
-        gbc.gridx = 0;
-        gbc.gridy++;
-        gbc.insets = new Insets(0, 0, 0, 10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
-        add(new JLabel("Ilosc clusterow"), gbc);
-
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.1;
-        gbc.gridx = 1;
-        gbc.insets = new Insets(0, 0, 0, 10);
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.anchor = GridBagConstraints.LINE_END;
-        add(kNeighTxtField, gbc);
-/*
-        if (comboID == 0) {
-            gbc.weightx = 0.5;
-            gbc.weighty = 0.1;
-            gbc.gridx = 0;
-            gbc.gridy++;
-            gbc.insets = new Insets(0, 0, 0, 10);
-            gbc.fill = GridBagConstraints.NONE;
-            gbc.anchor = GridBagConstraints.LINE_END;
-            add(new JLabel("Threshold"), gbc);
-
-            gbc.weightx = 0.5;
-            gbc.weighty = 0.1;
-            gbc.gridx = 1;
-            gbc.insets = new Insets(0, 0, 0, 10);
-            gbc.fill = GridBagConstraints.NONE;
-            gbc.anchor = GridBagConstraints.LINE_END;
-            add(thresholdTxtField, gbc);
-        } else if (comboID == 1) {
-            gbc.weightx = 0.5;
-            gbc.weighty = 0.1;
-            gbc.gridx = 0;
-            gbc.gridy++;
-            gbc.insets = new Insets(0, 0, 0, 10);
-            gbc.fill = GridBagConstraints.NONE;
-            gbc.anchor = GridBagConstraints.LINE_END;
-            add(new JLabel("Ilosc k-sasiadow"), gbc);
-
-            gbc.weightx = 0.5;
-            gbc.weighty = 0.1;
-            gbc.gridx = 1;
-            gbc.insets = new Insets(0, 0, 0, 10);
-            gbc.fill = GridBagConstraints.NONE;
-            gbc.anchor = GridBagConstraints.LINE_END;
-            add(kNeighTxtField, gbc);
-        } else if (comboID == 2) {
-            gbc.weightx = 0.5;
-            gbc.weighty = 0.1;
-            gbc.gridx = 1;
-            gbc.gridy++;
-            gbc.insets = new Insets(0, 0, 0, 10);
-            gbc.fill = GridBagConstraints.NONE;
-            gbc.anchor = GridBagConstraints.LINE_END;
-            add(new JLabel("Color"), gbc);
-
-            gbc.weightx = 0.5;
-            gbc.weighty = 0.1;
-            gbc.gridx = 0;
-            gbc.insets = new Insets(0, 0, 0, 10);
-            gbc.fill = GridBagConstraints.NONE;
-            gbc.anchor = GridBagConstraints.LINE_END;
-            add(colorTxtField, gbc);
-        }*/
-        gbc.weightx = 1;
-        gbc.weighty = 0.1;
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
         gbc.gridx = 0;
         gbc.gridy ++;
-        gbc.insets = new Insets(0,0,0,10);
+        //gbc.insets = new Insets(0, 0, 0, 10);
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        add(new JLabel("Ilosc klas"), gbc);
+
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
+        gbc.gridx = 1;
+        //gbc.insets = new Insets(0, 0, 0, 10);
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        add(new JLabel("Threshold"), gbc);
+
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
+        gbc.gridx = 0;
+        gbc.gridy++;
+        //gbc.insets = new Insets(0, 0, 0, 10);
+        gbc.gridwidth = 1;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        add(kNeighTxtField, gbc);
+
+
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
+        gbc.gridx = 1;
+        //gbc.insets = new Insets(0, 0, 0, 10);
+        gbc.gridwidth = 1;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        add(thresholdTxtField, gbc);
+
+        //gbc.weightx = 0.2;
+        //gbc.weighty = 0.2;
+        gbc.gridx = 0;
+        gbc.gridy ++;
+        //gbc.insets = new Insets(0,0,0,10);
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.LINE_END;
         add(segmentImageButton, gbc);
@@ -173,14 +138,14 @@ public class UserPanel extends JPanel {
     private void segmentImageButtonAction() {
         int id = segTypeComboBox.getSelectedIndex();
         if (id == 0) {
-            String segParam = kNeighTxtField.getText();
+            String segParam = thresholdTxtField.getText();
             segmentEvent = new SegmentEvent(this, id, segParam);
         }  else if (id == 1) {
             String segParam = kNeighTxtField.getText();
             segmentEvent = new SegmentEvent(this, id, segParam);
         } else if (id == 2) {
             String segParam = kNeighTxtField.getText();
-            segmentEvent = new SegmentEvent(this, id, segParam);
+            segmentEvent = new SegmentEvent(this, id, "");
         }
         if (formListener != null) {
             formListener.segmentEventOccured(segmentEvent);
