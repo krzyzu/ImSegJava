@@ -20,7 +20,7 @@ public class UserPanel extends JPanel {
 
     public UserPanel() {
         fileChooser = new JFileChooser();
-        FileNameExtensionFilter fileChooserFilter = new FileNameExtensionFilter("DICOM", "dcr", "RA64","DCM","DCM30", "JPG", "JPEG");
+        FileNameExtensionFilter fileChooserFilter = new FileNameExtensionFilter("JPG & DICOM","DCM","DCM30", "JPG", "JPEG");
         fileChooser.setFileFilter(fileChooserFilter);
         chooseFileButton = new JButton("Wybierz obraz");
         chooseFileButton.addActionListener(v -> chooseFileButtonAction());
@@ -92,7 +92,7 @@ public class UserPanel extends JPanel {
         gbc.gridwidth = 1;
         //gbc.insets = new Insets(0, 0, 0, 10);
         gbc.anchor = GridBagConstraints.CENTER;
-        add(new JLabel("Ilosc klas(k-means)"), gbc);
+        add(new JLabel("Liczba klastrow(k-means)"), gbc);
 
         //gbc.weightx = 0.2;
         //gbc.weighty = 0.2;
